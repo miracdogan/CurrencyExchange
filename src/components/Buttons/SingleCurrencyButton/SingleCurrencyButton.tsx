@@ -2,8 +2,10 @@ import React from "react";
 
 const SingleCurrencyButton = () => {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <button className="border-2 border-sky-600">Single</button>
+    <div>
+      <button className="w-48 shadow-lg bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Single
+      </button>
     </div>
   );
 };
