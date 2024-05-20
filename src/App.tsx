@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import SingleCurrencyButton from "./components/Buttons/SingleCurrencyButton/SingleCurrencyButton";
 import MultipleCurrenciesButton from "./components/Buttons/MultipleCurrenciesButton/MultipleCurrenciesButton";
+import SingleCurrencyRect from "./components/SingleCurrencyRect/SingleCurrencyRect";
+import MultipleCurrenciesRect from "./components/MultipleCurrenciesRect/MultipleCurrenciesRect";
+
 import "./App.css";
 import "./index.css";
 
 const App = () => {
+  const [showSingle, setShowSingle] = useState(true);
   return (
-    <div className="flex flex-col items-center justify-center h-96">
-      <div className="flex space-x-4 h-full max-h-0">
-        <div>
+    <div className="flex flex-col items-center justify-center h-screen space-y-4">
+      <div className="flex space-x-4">
+        <button onClick={() => setShowSingle(true)}>
           <SingleCurrencyButton />
-        </div>
-        <div>
+        </button>
+        <button onClick={() => setShowSingle(false)}>
           <MultipleCurrenciesButton />
-        </div>
+        </button>
       </div>
+      {showSingle ? <SingleCurrencyRect /> : <MultipleCurrenciesRect />}
     </div>
   );
 };
