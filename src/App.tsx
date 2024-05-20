@@ -10,8 +10,8 @@ import "./index.css";
 const App = () => {
   const [showSingle, setShowSingle] = useState(true);
   return (
-    <div className="flex flex-col items-center justify-center h-screen space-y-4">
-      <div className="flex space-x-4">
+    <div className="flex flex-col items-center justify-center space-y-4 mt-44">
+      <div className="flex space-x-5">
         <button onClick={() => setShowSingle(true)}>
           <SingleCurrencyButton />
         </button>
