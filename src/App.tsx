@@ -12,6 +12,7 @@ const App = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-4 mt-44">
       <div className="flex space-x-5">
+        //Toggle?
         <button onClick={() => setShowSingle(true)}>
           <SingleCurrencyButton />
         </button>
